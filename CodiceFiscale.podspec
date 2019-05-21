@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CodiceFiscale'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Una semplice libreria per iOS scritta in swift che ti permette di calcolare il codice fiscale.'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mo3bius' => 'luigiaiello97@gmail.com' }
   s.source           = { :git => 'https://github.com/abenergie/CodiceFiscale.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://www.linkedin.com/company/abenergie/'
 
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
