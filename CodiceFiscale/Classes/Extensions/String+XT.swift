@@ -17,4 +17,24 @@ extension String {
     subscript (position: Int) -> Character {
         return self[index(startIndex, offsetBy: position)]
     }
+
+    var isValidFiscalCode: Bool {
+        guard
+            self.count > 0,
+            self.count == 16
+        else {
+            return false
+        }
+
+        let pattern = "^[A-Z]{6}[A-Z0-9]{2}[A-Z][A-Z0-9]{2}[A-Z][A-Z0-9]{3}[A-Z]$"
+        do {
+            if try NSRegularExpression(pattern: pattern, options: .caseInsensitive).firstMatch(in: self, options: [], range: NSRange(location: 0, length: self.count)) == nil {
+                return false
+            }
+        } catch {
+            return false
+        }
+
+        return true
+    }
 }
