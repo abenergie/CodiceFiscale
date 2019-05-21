@@ -91,11 +91,7 @@ public class FiscalCodeManager: NSObject {
         guard fiscalCode.isValidFiscalCode else {
             return nil
         }
-
-        // LLALGU97E03A794L
-        // 0123456789012345
-        // [LLA][LGU][97][E][03][A794][L]
-        // [KKK][KKK][KK][K][KK][KKKK][L]
+        
         let surname = fiscalCode[0..<3]
         let name = fiscalCode[3..<6]
         let year = fiscalCode[6..<8]
@@ -304,7 +300,7 @@ public class FiscalCodeManager: NSObject {
         guard
             var intDay = Int(day),
             var intYear = Int(year),
-            let intMonth = monthCodes.index(of: month)
+            let intMonth = monthCodes.firstIndex(of: month)
         else {
             return nil
         }

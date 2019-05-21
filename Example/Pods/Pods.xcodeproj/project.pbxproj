@@ -34,6 +34,7 @@
 		2A40BAE92294401C0090732B /* LocalAuthorites.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A40BAD72293FDA30090732B /* LocalAuthorites.json */; };
 		2A40BAEA2294401C0090732B /* Evens.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A40BAE222940E650090732B /* Evens.json */; };
 		2A40BAEB2294401C0090732B /* Odds.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A40BAE122940E650090732B /* Odds.json */; };
+		2A40BAEC229440AC0090732B /* CodiceFiscale-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5463829B9D9C440A37C2A6ACFFEDAFAD /* CodiceFiscale-dummy.m */; };
 		2EBC629EE4623C92A95520B0EB72DB9F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD98DB8C1AA8E2390412D61DB64864D /* XCTest.framework */; };
 		30966E26266F62432C8E914340871113 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = F0E824AA11D5A3B34AF3D2EDF9287BC7 /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3101D8F2678E107351E1179C14FC7BF5 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C718FE0CA15C30146720A70B312BA5C /* BeAnInstanceOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -189,11 +190,11 @@
 		2505CFB5CDFCA7C6D7B521B5DD5C2591 /* ExpectationMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpectationMessage.swift; path = Sources/Nimble/ExpectationMessage.swift; sourceTree = "<group>"; };
 		2A40BAD12293FB640090732B /* FiscalCodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FiscalCodeManager.swift; path = CodiceFiscale/Classes/FiscalCodeManager.swift; sourceTree = "<group>"; };
 		2A40BAD52293FBE20090732B /* JSONSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
-		2A40BAD72293FDA30090732B /* LocalAuthorites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalAuthorites.json; sourceTree = "<group>"; };
+		2A40BAD72293FDA30090732B /* LocalAuthorites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = LocalAuthorites.json; path = ../../Assets/LocalAuthorites.json; sourceTree = "<group>"; };
 		2A40BADA229401BE0090732B /* String+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+XT.swift"; sourceTree = "<group>"; };
 		2A40BADC229403380090732B /* Date+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+XT.swift"; sourceTree = "<group>"; };
-		2A40BAE122940E650090732B /* Odds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Odds.json; sourceTree = "<group>"; };
-		2A40BAE222940E650090732B /* Evens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Evens.json; sourceTree = "<group>"; };
+		2A40BAE122940E650090732B /* Odds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Odds.json; path = ../../Assets/Odds.json; sourceTree = "<group>"; };
+		2A40BAE222940E650090732B /* Evens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Evens.json; path = ../../Assets/Evens.json; sourceTree = "<group>"; };
 		2AFD575FD3CBBF49FD3063F42BE93C72 /* CodiceFiscale.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CodiceFiscale.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2C8889B79E19BE3AC0DB28FA654FC275 /* NMBStringify.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBStringify.m; path = Sources/NimbleObjectiveC/NMBStringify.m; sourceTree = "<group>"; };
 		2CFA386331E06F0598A349A458D4EDA7 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
@@ -918,6 +919,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A40BAEC229440AC0090732B /* CodiceFiscale-dummy.m in Sources */,
 				2A40BADB229401BE0090732B /* String+XT.swift in Sources */,
 				2A40BAD62293FBE20090732B /* JSONSerializer.swift in Sources */,
 				2A40BAD22293FB640090732B /* FiscalCodeManager.swift in Sources */,
