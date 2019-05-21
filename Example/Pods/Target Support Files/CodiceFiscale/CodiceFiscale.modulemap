@@ -1,0 +1,6 @@
+framework module CodiceFiscale {
+  umbrella header "CodiceFiscale-umbrella.h"
+
+  export *
+  module * { export * }
+}

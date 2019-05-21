@@ -1,0 +1,27 @@
+PODS:
+  - CodiceFiscale (0.1.0)
+  - Nimble (8.0.1)
+  - Quick (2.1.0)
+
+DEPENDENCIES:
+  - CodiceFiscale (from `../`)
+  - Nimble
+  - Quick
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  CodiceFiscale:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CodiceFiscale: b47f7f5311505d7b391b4afd6dea8f85fec5d60c
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+
+PODFILE CHECKSUM: e3b356853f2e85502a6363265111884c05fbb996
+
+COCOAPODS: 1.6.1

@@ -1,0 +1,19 @@
+## Target platform
+platform :ios, '10.0'
+
+## External source
+source 'https://github.com/CocoaPods/specs.git'
+
+## Use frameworks
+use_frameworks!
+
+target 'CodiceFiscale_Example' do
+  pod 'CodiceFiscale', :path => '../'
+
+  target 'CodiceFiscale_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick'
+    pod 'Nimble'
+  end
+end
