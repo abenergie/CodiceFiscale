@@ -33,9 +33,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'CodiceFiscale/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'CodiceFiscale' => ['CodiceFiscale/Assets/*.png']
-  # }
+  s.resource_bundles = {
+      'CodiceFiscale' => ['CodiceFiscale/Assets/*.json']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
