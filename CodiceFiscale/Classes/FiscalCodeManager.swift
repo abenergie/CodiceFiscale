@@ -11,12 +11,12 @@ import UIKit
 // Wikipedia codice fiscale: https://it.wikipedia.org/wiki/Codice_fiscale
 
 public class FiscalCode: NSObject {
-    var name: String
-    var surname: String
-    var gender: Gender
-    var date: Date
-    var town: String
-    var province: String
+    public var name: String
+    public var surname: String
+    public var gender: Gender
+    public var date: Date
+    public var town: String
+    public var province: String
 
     public init(name: String, surname: String, gender: Gender, date: Date, town: String, province: String) {
         self.name = name
@@ -87,6 +87,38 @@ public class FiscalCodeManager: NSObject {
         return calculate(data: data)
     }
 
+    public func retriveInformationFrom(fiscalCode: String) -> FiscalCode? {
+        guard fiscalCode.isValidFiscalCode else {
+            return nil
+        }
+
+        // LLALGU97E03A794L
+        // 0123456789012345
+        // [LLA][LGU][97][E][03][A794][L]
+        // [KKK][KKK][KK][K][KK][KKKK][L]
+        let surname = fiscalCode[0..<3]
+        let name = fiscalCode[3..<6]
+        let year = fiscalCode[6..<8]
+        let month = fiscalCode[8]
+        let day = fiscalCode[9..<11]
+        let cityCode = fiscalCode[11..<15]
+
+        guard
+            let gender = getGender(day),
+            let date = getNormalizedDate(year: year, month: month, day: day, gender: gender),
+            let localAuthority = findCityBy(cityCode)
+        else {
+            return nil
+        }
+
+        return FiscalCode(name: name,
+                          surname: surname,
+                          gender: gender,
+                          date: date,
+                          town: localAuthority.town,
+                          province: localAuthority.province)
+    }
+
     // MARK: - Private methods
     private func calculate(data: FiscalCode) -> String? {
         let cfSurname = sanitizeSurname(input: data.surname)
@@ -103,7 +135,13 @@ public class FiscalCodeManager: NSObject {
             return nil
         }
 
-        return "\(partialFiscalCode)\(cfCheckDigit)"
+        let fiscalCode = "\(partialFiscalCode)\(cfCheckDigit)"
+
+        guard fiscalCode.isValidFiscalCode else {
+            return nil
+        }
+
+        return fiscalCode
     }
 
     /**
@@ -243,6 +281,49 @@ public class FiscalCodeManager: NSObject {
         }
 
         return ctrlChar[(sumEvens + sumOdds) % 26]
+    }
+
+    // MARK: - Reverse
+    private func findCityBy( _ code: String) -> LocalAuthority? {
+        guard let localAuthorites = self.localAuthorites else {
+            return nil
+        }
+
+        return localAuthorites.first(where: { $0.code == code })
+    }
+
+    private func getGender(_ day: String) -> Gender? {
+        guard let intDay = Int(day) else {
+            return nil
+        }
+
+        return intDay > 40 ? .female : .male
+    }
+
+    private func getNormalizedDate(year: String, month: Character, day: String, gender: Gender) -> Date? {
+        guard
+            var intDay = Int(day),
+            var intYear = Int(year),
+            let intMonth = monthCodes.index(of: month)
+        else {
+            return nil
+        }
+
+        let now = Date()
+        let pos = monthCodes.distance(from: monthCodes.startIndex, to: intMonth)
+
+        // Calculate Days
+        if gender == .female {
+            intDay -= 40
+        }
+
+        intYear += (now.component(.year) > intYear + 2000) ? 2000 : 1900
+
+        let dayFormat = intDay > 9 ? "dd" : "d"
+        let monthFormat = pos > 9 ? "MM" : "M"
+        let yearFormat = "yyyy"
+
+        return Date.from(string: "\(intDay) \(pos) \(intYear)", withFormat: "\(dayFormat) \(monthFormat) \(yearFormat)")
     }
 
     // MARK: - Helpers
