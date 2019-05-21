@@ -28,10 +28,10 @@ public class FiscalCode: NSObject {
     }
 }
 
-public struct LocalAuthority: Decodable {
-    var province: String
-    var town: String
-    var code: String
+public class LocalAuthority: NSObject, Decodable {
+    public var province: String
+    public var town: String
+    public var code: String
 }
 
 public enum Gender {
