@@ -70,7 +70,6 @@ class FiscalCodeViewController: BaseViewController {
 
     // MARK: - Configurations
     private func configurationText() {
-        fiscalCodeTextField.text = "LLALGU97E03A794L"
         titleLabel.text = "Codice Fiscale"
         nameTextField.placeholder = "Nome"
         surnameTextField.placeholder = "Cognome"

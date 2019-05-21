@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CodiceFiscale'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Una semplice libreria per iOS scritta in swift che ti permette di calcolare il codice fiscale.'
 
 # This description is used to generate tags and improve search results.
@@ -31,10 +31,10 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
 
-  s.source_files = 'CodiceFiscale/Classes/**/*'
+  s.source_files = 'CodiceFiscale/Classes'
   
   s.resource_bundles = {
-      'CodiceFiscale' => ['CodiceFiscale/Assets/*.json']
+      'CodiceFiscale' => ['CodiceFiscale/Assets']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

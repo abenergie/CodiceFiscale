@@ -190,11 +190,11 @@
 		2505CFB5CDFCA7C6D7B521B5DD5C2591 /* ExpectationMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpectationMessage.swift; path = Sources/Nimble/ExpectationMessage.swift; sourceTree = "<group>"; };
 		2A40BAD12293FB640090732B /* FiscalCodeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FiscalCodeManager.swift; path = CodiceFiscale/Classes/FiscalCodeManager.swift; sourceTree = "<group>"; };
 		2A40BAD52293FBE20090732B /* JSONSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
-		2A40BAD72293FDA30090732B /* LocalAuthorites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = LocalAuthorites.json; path = ../../Assets/LocalAuthorites.json; sourceTree = "<group>"; };
+		2A40BAD72293FDA30090732B /* LocalAuthorites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalAuthorites.json; sourceTree = "<group>"; };
 		2A40BADA229401BE0090732B /* String+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+XT.swift"; sourceTree = "<group>"; };
 		2A40BADC229403380090732B /* Date+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+XT.swift"; sourceTree = "<group>"; };
-		2A40BAE122940E650090732B /* Odds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Odds.json; path = ../../Assets/Odds.json; sourceTree = "<group>"; };
-		2A40BAE222940E650090732B /* Evens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Evens.json; path = ../../Assets/Evens.json; sourceTree = "<group>"; };
+		2A40BAE122940E650090732B /* Odds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Odds.json; sourceTree = "<group>"; };
+		2A40BAE222940E650090732B /* Evens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Evens.json; sourceTree = "<group>"; };
 		2AFD575FD3CBBF49FD3063F42BE93C72 /* CodiceFiscale.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CodiceFiscale.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2C8889B79E19BE3AC0DB28FA654FC275 /* NMBStringify.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBStringify.m; path = Sources/NimbleObjectiveC/NMBStringify.m; sourceTree = "<group>"; };
 		2CFA386331E06F0598A349A458D4EDA7 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
@@ -411,16 +411,24 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		2A40BAD32293FBB00090732B /* Utilities */ = {
+		2A40BAEE229448D90090732B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A40BADA229401BE0090732B /* String+XT.swift */,
+				2A40BADC229403380090732B /* Date+XT.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		2A40BAEF229448E60090732B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				2A40BAD52293FBE20090732B /* JSONSerializer.swift */,
 			);
 			name = Utilities;
-			path = CodiceFiscale/Classes/Utilities;
 			sourceTree = "<group>";
 		};
-		2A40BAD42293FBB90090732B /* Resources */ = {
+		2A40BAF0229448F40090732B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				2A40BAD72293FDA30090732B /* LocalAuthorites.json */,
@@ -428,17 +436,6 @@
 				2A40BAE122940E650090732B /* Odds.json */,
 			);
 			name = Resources;
-			path = CodiceFiscale/Classes/Resources;
-			sourceTree = "<group>";
-		};
-		2A40BAD92294019F0090732B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2A40BADA229401BE0090732B /* String+XT.swift */,
-				2A40BADC229403380090732B /* Date+XT.swift */,
-			);
-			name = Extensions;
-			path = CodiceFiscale/Classes/Extensions;
 			sourceTree = "<group>";
 		};
 		394DF7D723883C6B6930D64091CFA17B /* Products */ = {
@@ -457,9 +454,9 @@
 			isa = PBXGroup;
 			children = (
 				2A40BAD12293FB640090732B /* FiscalCodeManager.swift */,
-				2A40BAD92294019F0090732B /* Extensions */,
-				2A40BAD32293FBB00090732B /* Utilities */,
-				2A40BAD42293FBB90090732B /* Resources */,
+				2A40BAEE229448D90090732B /* Extensions */,
+				2A40BAEF229448E60090732B /* Utilities */,
+				2A40BAF0229448F40090732B /* Resources */,
 				1C6295CD3958769C052AA81419078CE0 /* Pod */,
 				14587F8D56508560E89B8BF108EC3E31 /* Support Files */,
 			);
