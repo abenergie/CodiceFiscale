@@ -31,10 +31,10 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
 
-  s.source_files = 'CodiceFiscale/Classes'
+  s.source_files = 'CodiceFiscale/Classes/*'
   
   s.resource_bundles = {
-      'CodiceFiscale' => ['CodiceFiscale/Assets']
+      'CodiceFiscale' => ['CodiceFiscale/Assets/*']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
