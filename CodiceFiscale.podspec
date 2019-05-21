@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'mo3bius' => 'luigiaiello97@gmail.com' }
   s.source           = { :git => 'https://github.com/abenergie/CodiceFiscale.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://www.linkedin.com/company/abenergie/'
+  s.social_media_url = 'http://www.abenergie.it'
 
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
