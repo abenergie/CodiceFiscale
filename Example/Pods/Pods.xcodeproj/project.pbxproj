@@ -29,11 +29,11 @@
 		24E87E5A2E15E6F2387EA7852E7F5457 /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B9830CF24072AF76C12A2EC3F667458E /* QuickConfiguration.m */; };
 		2A40BAD22293FB640090732B /* FiscalCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40BAD12293FB640090732B /* FiscalCodeManager.swift */; };
 		2A40BAD62293FBE20090732B /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40BAD52293FBE20090732B /* JSONSerializer.swift */; };
-		2A40BAD82293FDA30090732B /* LocalAuthorites.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A40BAD72293FDA30090732B /* LocalAuthorites.json */; };
 		2A40BADB229401BE0090732B /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40BADA229401BE0090732B /* String+XT.swift */; };
 		2A40BADD229403380090732B /* Date+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40BADC229403380090732B /* Date+XT.swift */; };
-		2A40BAE322940E650090732B /* Odds.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A40BAE122940E650090732B /* Odds.json */; };
-		2A40BAE422940E650090732B /* Evens.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A40BAE222940E650090732B /* Evens.json */; };
+		2A40BAE92294401C0090732B /* LocalAuthorites.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A40BAD72293FDA30090732B /* LocalAuthorites.json */; };
+		2A40BAEA2294401C0090732B /* Evens.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A40BAE222940E650090732B /* Evens.json */; };
+		2A40BAEB2294401C0090732B /* Odds.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A40BAE122940E650090732B /* Odds.json */; };
 		2EBC629EE4623C92A95520B0EB72DB9F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD98DB8C1AA8E2390412D61DB64864D /* XCTest.framework */; };
 		30966E26266F62432C8E914340871113 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = F0E824AA11D5A3B34AF3D2EDF9287BC7 /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3101D8F2678E107351E1179C14FC7BF5 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C718FE0CA15C30146720A70B312BA5C /* BeAnInstanceOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -89,7 +89,6 @@
 		A4B6197170839BA97DE105AA9D1FAD7D /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA637E42D89BCAECE128FCF308B0EA /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		A51570857887E8E40B39F91C35358E2D /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86071BFA01872A1E0EDCB829015FAA96 /* Predicate.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		A74CEEC58BDEB1F9A37685FCA3376746 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A930A8C025F3621E6783F7FC351EA21 /* BeGreaterThanOrEqualTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		A8ABB6107C416B5ACE4190B0892E676B /* CodiceFiscale-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5463829B9D9C440A37C2A6ACFFEDAFAD /* CodiceFiscale-dummy.m */; };
 		A94C478FB12FBE0A425D939B56659A50 /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E052925AFD4FCFA8066131E006745EC2 /* Callsite.swift */; };
 		A9F93A9C40771906414564A30333FDB9 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53899502077A5F034748CE793F892661 /* AdapterProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		ABE9325BE104074DB60CFD09E3C43631 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61F466FFB9505D8EC0DD7D08C1997D /* DSL.swift */; };
@@ -838,7 +837,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				TargetAttributes = {
 					2EC4204D24F392F3B63D3176331C7DEC = {
 						LastSwiftMigration = 1020;
@@ -853,11 +852,11 @@
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 394DF7D723883C6B6930D64091CFA17B /* Products */;
@@ -906,9 +905,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A40BAD82293FDA30090732B /* LocalAuthorites.json in Resources */,
-				2A40BAE322940E650090732B /* Odds.json in Resources */,
-				2A40BAE422940E650090732B /* Evens.json in Resources */,
+				2A40BAE92294401C0090732B /* LocalAuthorites.json in Resources */,
+				2A40BAEA2294401C0090732B /* Evens.json in Resources */,
+				2A40BAEB2294401C0090732B /* Odds.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,7 +919,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A40BADB229401BE0090732B /* String+XT.swift in Sources */,
-				A8ABB6107C416B5ACE4190B0892E676B /* CodiceFiscale-dummy.m in Sources */,
 				2A40BAD62293FBE20090732B /* JSONSerializer.swift in Sources */,
 				2A40BAD22293FB640090732B /* FiscalCodeManager.swift in Sources */,
 				2A40BADD229403380090732B /* Date+XT.swift in Sources */,
@@ -1175,6 +1173,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1303,6 +1302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

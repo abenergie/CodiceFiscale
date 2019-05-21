@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-8G-ZCb">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="648.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="728.33333333333337"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InE-HW-ZB4">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
@@ -163,45 +163,93 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="544-pm-roc">
                                                 <rect key="frame" x="0.0" y="488.33333333333337" width="375" height="80"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNg-ni-vcD">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="a6O-P6-yb1">
                                                         <rect key="frame" x="24" y="16" width="327" height="48"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.396078431372549" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNg-ni-vcD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="131.66666666666666" height="48"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.396078431372549" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="48" id="mlg-3w-Cwh"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                                <state key="normal" title="Calcola">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="calculateDidTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Z9k-Er-4Au"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHi-aw-gRi">
+                                                                <rect key="frame" x="195.66666666666663" y="0.0" width="131.33333333333337" height="48"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.39607843139999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="48" id="FMc-le-5jD"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                                <state key="normal" title="Inverso">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="reverseDidTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TUU-L7-vub"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="a6O-P6-yb1" firstAttribute="leading" secondItem="544-pm-roc" secondAttribute="leading" constant="24" id="5Xy-lP-wFF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="a6O-P6-yb1" secondAttribute="bottom" constant="16" id="Og1-i1-4O5"/>
+                                                    <constraint firstAttribute="trailing" secondItem="a6O-P6-yb1" secondAttribute="trailing" constant="24" id="je4-ES-f7t"/>
+                                                    <constraint firstItem="a6O-P6-yb1" firstAttribute="top" secondItem="544-pm-roc" secondAttribute="top" constant="16" id="sAp-3K-Ylu"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vld-zg-hKV">
+                                                <rect key="frame" x="0.0" y="568.33333333333337" width="375" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXp-3k-yUT">
+                                                        <rect key="frame" x="24" y="16" width="327" height="48"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.39607843139999999" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="48" id="mlg-3w-Cwh"/>
+                                                            <constraint firstAttribute="height" constant="48" id="l35-mI-4wP"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                        <state key="normal" title="Calcola">
+                                                        <state key="normal" title="Scansiona">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="calculateDidTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="U06-3X-yID"/>
+                                                            <action selector="scanDidTap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bPE-E9-dGX"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="mNg-ni-vcD" secondAttribute="trailing" constant="24" id="FZr-SK-Rp6"/>
-                                                    <constraint firstItem="mNg-ni-vcD" firstAttribute="top" secondItem="544-pm-roc" secondAttribute="top" constant="16" id="Mdq-oo-E7e"/>
-                                                    <constraint firstItem="mNg-ni-vcD" firstAttribute="leading" secondItem="544-pm-roc" secondAttribute="leading" constant="24" id="d9Z-ug-4xh"/>
-                                                    <constraint firstAttribute="bottom" secondItem="mNg-ni-vcD" secondAttribute="bottom" constant="16" id="eAQ-aL-AiC"/>
+                                                    <constraint firstAttribute="bottom" secondItem="IXp-3k-yUT" secondAttribute="bottom" constant="16" id="HCi-ZK-fbM"/>
+                                                    <constraint firstItem="IXp-3k-yUT" firstAttribute="top" secondItem="Vld-zg-hKV" secondAttribute="top" constant="16" id="i0t-Pw-gkM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IXp-3k-yUT" secondAttribute="trailing" constant="24" id="xeI-9l-5W0"/>
+                                                    <constraint firstItem="IXp-3k-yUT" firstAttribute="leading" secondItem="Vld-zg-hKV" secondAttribute="leading" constant="24" id="zgf-xG-esU"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49b-dk-xOZ">
-                                                <rect key="frame" x="0.0" y="568.33333333333337" width="375" height="80"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kwv-v8-dsg">
+                                                <rect key="frame" x="0.0" y="648.33333333333337" width="375" height="80"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codice Fiscale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzw-hC-Svy">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Codice fiscale" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zD8-La-EHR">
                                                         <rect key="frame" x="24" y="16" width="327" height="48"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="EpW-fo-3EH"/>
+                                                        </constraints>
                                                         <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
+                                                    </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="tzw-hC-Svy" firstAttribute="top" secondItem="49b-dk-xOZ" secondAttribute="top" constant="16" id="Ex1-N1-wwY"/>
-                                                    <constraint firstItem="tzw-hC-Svy" firstAttribute="leading" secondItem="49b-dk-xOZ" secondAttribute="leading" constant="24" id="bNJ-ZE-EYu"/>
-                                                    <constraint firstAttribute="bottom" secondItem="tzw-hC-Svy" secondAttribute="bottom" constant="16" id="jy9-6N-ZyQ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="tzw-hC-Svy" secondAttribute="trailing" constant="24" id="pMH-sl-XLj"/>
+                                                    <constraint firstItem="zD8-La-EHR" firstAttribute="top" secondItem="Kwv-v8-dsg" secondAttribute="top" constant="16" id="8O9-2e-e7g"/>
+                                                    <constraint firstAttribute="trailing" secondItem="zD8-La-EHR" secondAttribute="trailing" constant="24" id="Oot-yS-6Nl"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zD8-La-EHR" secondAttribute="bottom" constant="16" id="fsk-Sg-esW"/>
+                                                    <constraint firstItem="zD8-La-EHR" firstAttribute="leading" secondItem="Kwv-v8-dsg" secondAttribute="leading" constant="24" id="gGr-rY-TMD"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -228,10 +276,14 @@
                         <outlet property="calculateButton" destination="mNg-ni-vcD" id="GIn-hp-TDA"/>
                         <outlet property="cityOfBirthTextField" destination="Ni7-LN-65h" id="CGv-li-TVg"/>
                         <outlet property="dateOfBirthTextField" destination="3wA-Nr-00B" id="VTr-sx-2Kz"/>
-                        <outlet property="fiscalCodeLabel" destination="tzw-hC-Svy" id="YTC-Qy-SQM"/>
+                        <outlet property="fiscalCodeTextField" destination="zD8-La-EHR" id="swf-1u-gmJ"/>
                         <outlet property="genderLabel" destination="iy6-HD-sco" id="Dsz-0r-fLe"/>
                         <outlet property="genederSegmentedControl" destination="5vD-zz-jjV" id="ard-iG-LA6"/>
                         <outlet property="nameTextField" destination="UuT-Ui-Qui" id="DDI-UA-Uu6"/>
+                        <outlet property="reverseButton" destination="YHi-aw-gRi" id="gEP-Pn-uIj"/>
+                        <outlet property="scanButton" destination="IXp-3k-yUT" id="kZ4-By-bHT"/>
+                        <outlet property="scrollView" destination="PIY-09-P94" id="NPt-oF-4lP"/>
+                        <outlet property="stackView" destination="jKQ-8G-ZCb" id="dW6-6g-tgq"/>
                         <outlet property="surnameTextField" destination="kTT-NZ-X69" id="xVn-km-Bgg"/>
                         <outlet property="titleLabel" destination="upY-Bk-jyP" id="3ge-SF-12p"/>
                     </connections>

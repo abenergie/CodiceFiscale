@@ -12,15 +12,26 @@ import CodiceFiscale
 class FiscalCodeViewController: BaseViewController {
 
     // MARK: - Outlets
+    // Views
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var genederSegmentedControl: UISegmentedControl!
+
+    // Labels
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+
+    // Text Fields
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var dateOfBirthTextField: UITextField!
-    @IBOutlet weak var genderLabel: UILabel!
-    @IBOutlet weak var genederSegmentedControl: UISegmentedControl!
     @IBOutlet weak var cityOfBirthTextField: UITextField!
+    @IBOutlet weak var fiscalCodeTextField: UITextField!
+
+    // Buttons
     @IBOutlet weak var calculateButton: UIButton!
-    @IBOutlet weak var fiscalCodeLabel: UILabel!
+    @IBOutlet weak var reverseButton: UIButton!
+    @IBOutlet weak var scanButton: UIButton!
 
     // MARK: - Components
     let datePicker = UIDatePicker()
@@ -35,6 +46,12 @@ class FiscalCodeViewController: BaseViewController {
         setup()
         setupDataPicker()
         configurationText()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        scrollView.contentSize = stackView.frame.size
     }
 
     // MARK: - Setup
@@ -53,12 +70,14 @@ class FiscalCodeViewController: BaseViewController {
 
     // MARK: - Configurations
     private func configurationText() {
+        fiscalCodeTextField.text = "LLALGU97E03A794L"
         titleLabel.text = "Codice Fiscale"
         nameTextField.placeholder = "Nome"
         surnameTextField.placeholder = "Cognome"
         dateOfBirthTextField.placeholder = "Data di nascita"
         genderLabel.text = "Sesso"
         cityOfBirthTextField.placeholder = "Città di nascita"
+        fiscalCodeTextField.placeholder = "Codice fiscale"
     }
 
     // MARK: - Helpers
@@ -73,7 +92,7 @@ class FiscalCodeViewController: BaseViewController {
     @objc private func handlePicker(_ datePicker: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"
-
+        
         dateOfBirthTextField.text = dateFormatter.string(from: datePicker.date)
     }
 
@@ -98,6 +117,28 @@ class FiscalCodeViewController: BaseViewController {
                               province: city)
 
         let fiscalCode = fiscalCodeManager.calculate(fiscalCodeData: data)
-        fiscalCodeLabel.text = fiscalCode
+        fiscalCodeTextField.text = fiscalCode
+    }
+
+    @IBAction func reverseDidTap(_ sender: Any) {
+        guard
+            let fiscalCode = checkField(fiscalCodeTextField),
+            let object = fiscalCodeManager.retriveInformationFrom(fiscalCode: fiscalCode)
+        else {
+            return
+        }
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+
+        nameTextField.text = object.name
+        surnameTextField.text = object.surname
+        dateOfBirthTextField.text = dateFormatter.string(from: object.date)
+        genederSegmentedControl.selectedSegmentIndex = object.gender == .male ? 0 : 1
+        cityOfBirthTextField.text = object.town
+    }
+
+    @IBAction func scanDidTap(_ sender: Any) {
+
     }
 }
