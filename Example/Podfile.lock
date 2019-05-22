@@ -1,16 +1,19 @@
 PODS:
-  - CodiceFiscale (0.1.0)
+  - CodiceFiscale (0.1.2)
   - Nimble (8.0.1)
+  - QRCodeReader.swift (10.1.0)
   - Quick (2.1.0)
 
 DEPENDENCIES:
   - CodiceFiscale (from `../`)
   - Nimble
+  - QRCodeReader.swift
   - Quick
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Nimble
+    - QRCodeReader.swift
     - Quick
 
 EXTERNAL SOURCES:
@@ -18,10 +21,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CodiceFiscale: b47f7f5311505d7b391b4afd6dea8f85fec5d60c
+  CodiceFiscale: 0611bda0ce7e9e757a194e06dba20feb53b0545b
   Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
 
-PODFILE CHECKSUM: e3b356853f2e85502a6363265111884c05fbb996
+PODFILE CHECKSUM: ffd852a45552abf85e9a98243bb22316a613f5a3
 
 COCOAPODS: 1.6.1

@@ -2,7 +2,6 @@
 
 import Quick
 import Nimble
-import CodiceFiscale
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {

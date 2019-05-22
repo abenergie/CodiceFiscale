@@ -7,13 +7,24 @@ source 'https://github.com/CocoaPods/specs.git'
 ## Use frameworks
 use_frameworks!
 
+def testing_pods
+  pod 'Quick'
+  pod 'Nimble'
+end
+
+def utilities_pods
+	pod 'QRCodeReader.swift'
+end
+
 target 'CodiceFiscale_Example' do
   pod 'CodiceFiscale', :path => '../'
+  
+  utilities_pods
 
   target 'CodiceFiscale_Tests' do
     inherit! :search_paths
 
-    pod 'Quick'
-    pod 'Nimble'
+    testing_pods
+
   end
 end
