@@ -2,6 +2,12 @@
 
 Calculating the tax code for ios has never been easier.
 
+## Overview
+
+The example can help you better understand how the library works.
+
+<p align="center"> <img src="./Example/Screenshot/demo.png" /> </p>
+
 ## Requirements
 
 - iOS 10.0+
