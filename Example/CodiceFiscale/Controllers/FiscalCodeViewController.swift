@@ -8,6 +8,7 @@
 
 import UIKit
 import CodiceFiscale
+import QRCodeReader
 
 class FiscalCodeViewController: BaseViewController {
 
@@ -35,6 +36,20 @@ class FiscalCodeViewController: BaseViewController {
 
     // MARK: - Components
     let datePicker = UIDatePicker()
+    lazy var readerVC: QRCodeReaderViewController = {
+        let builder = QRCodeReaderViewControllerBuilder {
+            $0.reader = QRCodeReader(metadataObjectTypes: [.code39], captureDevicePosition: .back)
+
+            // Configure the view controller (optional)
+            $0.showTorchButton        = false
+            $0.showSwitchCameraButton = false
+            $0.showCancelButton       = true
+            $0.showOverlayView        = true
+            $0.rectOfInterest         = CGRect(x: 0.2, y: 0.2, width: 0.6, height: 0.6)
+        }
+
+        return QRCodeReaderViewController(builder: builder)
+    }()
 
     // MARK: - Objects
     private let fiscalCodeManager = FiscalCodeManager()
@@ -111,6 +126,22 @@ class FiscalCodeViewController: BaseViewController {
         fiscalCodeTextField.text = fiscalCode
     }
 
+    private func showQRScanner() {
+        readerVC.modalPresentationStyle = .formSheet
+        readerVC.delegate = self
+
+        readerVC.completionBlock = { (result) in
+            guard let result = result else {
+                return
+            }
+            
+            let data = self.fiscalCodeManager.retriveInformationFrom(fiscalCode: result.value)
+            self.fillFields(fiscalCode: result.value, data: data)
+        }
+
+        present(readerVC, animated: true, completion: nil)
+    }
+
     // MARK: - Actions
     @IBAction func calculateDidTap(_ sender: Any) {
         guard
@@ -147,10 +178,21 @@ class FiscalCodeViewController: BaseViewController {
     }
 
     @IBAction func scanDidTap(_ sender: Any) {
-        let scannerVC = fiscalCodeManager.scanFiscalCode { (fiscalCode, data) in
-            self.fillFields(fiscalCode: fiscalCode, data: data)
-        }
+        showQRScanner()
+    }
+}
 
-        self.present(scannerVC, animated: true, completion: nil)
+// Mark - QRCode Reader Delegate
+extension FiscalCodeViewController: QRCodeReaderViewControllerDelegate {
+    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+        reader.stopScanning()
+
+        dismiss(animated: true, completion: nil)
+    }
+
+    func readerDidCancel(_ reader: QRCodeReaderViewController) {
+        reader.stopScanning()
+
+        dismiss(animated: true, completion: nil)
     }
 }
