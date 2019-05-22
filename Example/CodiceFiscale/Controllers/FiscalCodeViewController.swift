@@ -95,6 +95,22 @@ class FiscalCodeViewController: BaseViewController {
         dateOfBirthTextField.text = dateFormatter.string(from: datePicker.date)
     }
 
+    private func fillFields(fiscalCode: String, data: FiscalCode?) {
+        guard let data = data else {
+            return
+        }
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+
+        nameTextField.text = data.name
+        surnameTextField.text = data.surname
+        dateOfBirthTextField.text = dateFormatter.string(from: data.date)
+        genederSegmentedControl.selectedSegmentIndex = data.gender == .male ? 0 : 1
+        cityOfBirthTextField.text = data.town
+        fiscalCodeTextField.text = fiscalCode
+    }
+
     // MARK: - Actions
     @IBAction func calculateDidTap(_ sender: Any) {
         guard
@@ -127,17 +143,14 @@ class FiscalCodeViewController: BaseViewController {
             return
         }
 
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy"
-
-        nameTextField.text = object.name
-        surnameTextField.text = object.surname
-        dateOfBirthTextField.text = dateFormatter.string(from: object.date)
-        genederSegmentedControl.selectedSegmentIndex = object.gender == .male ? 0 : 1
-        cityOfBirthTextField.text = object.town
+        fillFields(fiscalCode: fiscalCode, data: object)
     }
 
     @IBAction func scanDidTap(_ sender: Any) {
+        let scannerVC = fiscalCodeManager.scanFiscalCode { (fiscalCode, data) in
+            self.fillFields(fiscalCode: fiscalCode, data: data)
+        }
 
+        self.present(scannerVC, animated: true, completion: nil)
     }
 }
