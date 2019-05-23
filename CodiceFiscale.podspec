@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CodiceFiscale'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Una semplice libreria per iOS scritta in swift che ti permette di calcolare il codice fiscale.'
 
 # This description is used to generate tags and improve search results.
