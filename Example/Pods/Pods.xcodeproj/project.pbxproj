@@ -28,7 +28,13 @@
 		24AD9C69B1A899FA7DB0CA4D346319C5 /* CwlCatchException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300624AA622FF14CEFCE64F07FFF402E /* CwlCatchException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		24E87E5A2E15E6F2387EA7852E7F5457 /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E4655284C049264FC1E01E76F75C4BD2 /* QuickConfiguration.m */; };
 		2532BDF9257FE3BA4CEBC1D008FD70A9 /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFD00CBAFBA3A6F101E16E19A960EA /* ReaderOverlayView.swift */; };
-		2A893875BA84AC5608B2583280D36B6A /* Odds.json in Resources */ = {isa = PBXBuildFile; fileRef = 72879F297A0ABC2C3A1A457707425BF9 /* Odds.json */; };
+		2ADBBF952296AD3B00536DF1 /* Date+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63624BD2DAD674F9CD4EBBDDA434B7A /* Date+XT.swift */; };
+		2ADBBF962296AD3E00536DF1 /* FiscalCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1CAB76F2CB0B913765EE239046B4C /* FiscalCodeManager.swift */; };
+		2ADBBF972296AD4100536DF1 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704528FE1670E27A7C90C3884F1A6E8F /* JSONSerializer.swift */; };
+		2ADBBF982296AD4400536DF1 /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D4187EAFA78294F5F0B67DB4B552E9 /* String+XT.swift */; };
+		2ADBBF992296AD4700536DF1 /* Evens.json in Resources */ = {isa = PBXBuildFile; fileRef = 18AD2C78196256F3A8CEFAFBBAB8BE08 /* Evens.json */; };
+		2ADBBF9A2296AD4B00536DF1 /* LocalAuthorites.json in Resources */ = {isa = PBXBuildFile; fileRef = 85F81B39B3330C0BC9A5C7EE573D7C06 /* LocalAuthorites.json */; };
+		2ADBBF9B2296AD4E00536DF1 /* Odds.json in Resources */ = {isa = PBXBuildFile; fileRef = 72879F297A0ABC2C3A1A457707425BF9 /* Odds.json */; };
 		2E9A8CDD27D701D92A62A7DD7C540ABE /* QRCodeReader.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D092FB05E4579A78B2907E2982DE3F /* QRCodeReader.swift-dummy.m */; };
 		2EBC629EE4623C92A95520B0EB72DB9F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DFB9EBF906C9154E3A283B334A7E92 /* XCTest.framework */; };
 		303DF9A246592066E482FF9D7F563DE2 /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE77E826160FDF41C2C173C2D7F8596 /* QRCodeReaderViewControllerDelegate.swift */; };
@@ -50,7 +56,6 @@
 		4CF2901CD4DFEB7D2515546C9AEF4BB9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD35481F4DA6D7C1E6884F13AC1B3C0 /* Configuration.swift */; };
 		4E70FE29FB2BAD7E5427532B5D2FCF26 /* XCTestObservationCenter+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 466659019246B5FC282702DADBB747D8 /* XCTestObservationCenter+Register.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		515C31736C395B4A60A2CC420195DF9D /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D963AF6E152E3387877805BF9F83B7C /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		51CCD0E0F06A010909A90651D120F313 /* LocalAuthorites.json in Resources */ = {isa = PBXBuildFile; fileRef = 85F81B39B3330C0BC9A5C7EE573D7C06 /* LocalAuthorites.json */; };
 		53108B9B11A8093CADC321DE69D96BF7 /* Pods-CodiceFiscale_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F9D6D201B8F45B4BA65098ABDEE1E29 /* Pods-CodiceFiscale_Example-dummy.m */; };
 		554BABB8602E05F18FF75AAF4DE60788 /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55F6CEFCA52B32190CB7E479F131B13 /* NSBundle+CurrentTestBundle.swift */; };
 		573A5D74F5D2DDB147A69885239FAED0 /* Pods-CodiceFiscale_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67D490D856637D1E2C650722B94D80BB /* Pods-CodiceFiscale_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -82,7 +87,6 @@
 		888B88EF8BDEBCB1702F8BB33BCBC3B2 /* CwlCatchException.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5A9B172D6DB8E3FACBD30EACDED544 /* CwlCatchException.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		89A206D51752309E13BD5C427C35A090 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2067F60815711D3C1259806ECF705 /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		89D30C28183DF9BFC6C940211DA889D7 /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D503247DF7F5BA5EF72BC400ABD2BFC /* BeLessThanOrEqual.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		8E626E8533B2516539D13DD043ED268A /* FiscalCodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1CAB76F2CB0B913765EE239046B4C /* FiscalCodeManager.swift */; };
 		94C84E6DFA71C70DF521E9D995C1505F /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974503D041A6C3CA388BAE0CDF17EE66 /* BeVoid.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		966FBB84C847F2BCAED02AA147A2CFAB /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31BEAE5731F482EB504DDE01827A495 /* MatcherFunc.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		96CC21D061426815F2B0D69D46EEF913 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F224FF59FA7FD811FE2BC1A3561D34 /* QRCodeReaderViewController.swift */; };
@@ -133,17 +137,13 @@
 		E40A6E85823CE585BF269D1DF4EF5E04 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30ADD548B6C5C0541D31D0EE291DF82 /* ThrowError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		E421CC9222B4DCD92124CA45FBA6A247 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53DED0C133A32AC3A84B903EDFD623 /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		E74C63A506330D4E6E1DC8F3894BDC22 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E33350D711B4B0EC08AE91898562F5 /* Expectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		E7FB5F2B696B96919BC841EE0DDDDCD6 /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D4187EAFA78294F5F0B67DB4B552E9 /* String+XT.swift */; };
 		E80F2F25B622EBC3F1CACD1AFD851A11 /* ExpectationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5D39FDE0803C9D0FE2486F8353AC0 /* ExpectationMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		EB062EA45D4A3859C6CEA85DAC1ED237 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3623A8BB505B401EB813A22B9C6F9705 /* AssertionDispatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		EC1C63670F217B2E9FF692181107C8A6 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33596073A61C5043BCDFB12AA5DD3D9E /* QRCodeReader.swift */; };
 		ECC9D1DF80774E655F249835B0F85FC0 /* Quick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCF1E5B5F626CDD35B796E42DDF62991 /* Quick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0C360D61B4024848C08B4DEB8EAB84E /* Evens.json in Resources */ = {isa = PBXBuildFile; fileRef = 18AD2C78196256F3A8CEFAFBBAB8BE08 /* Evens.json */; };
-		F130D8E3E43EC86CF0DAEFBE6C9EB206 /* Date+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63624BD2DAD674F9CD4EBBDDA434B7A /* Date+XT.swift */; };
 		F1C4A66691B0560D266F6D79F218DBF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F38F8F2ECB80C0C2DF705B6EFF9F73F /* Foundation.framework */; };
 		F5090F52CF4E6B768D0FB5F676B61AE9 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D50D4D44B2E1AB75A637582D3D5986 /* Functional.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F596D6BBE5BAD012376F7CB73D44CE6B /* BeCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B332973CED9AEF729C4A4200A6A5873 /* BeCloseTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		FE96132DC09B6A6076F328E09350B5AB /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704528FE1670E27A7C90C3884F1A6E8F /* JSONSerializer.swift */; };
 		FEEE4D547E01CED16AF23EE27EA5C946 /* Pods-CodiceFiscale_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62627EDC1B0B745D98E0F08F01E439A9 /* Pods-CodiceFiscale_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -1010,6 +1010,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				785B122B8E877B49266C884DCDA2BB82 /* CodiceFiscale.bundle in Resources */,
+				2ADBBF9A2296AD4B00536DF1 /* LocalAuthorites.json in Resources */,
+				2ADBBF992296AD4700536DF1 /* Evens.json in Resources */,
+				2ADBBF9B2296AD4E00536DF1 /* Odds.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1038,9 +1041,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0C360D61B4024848C08B4DEB8EAB84E /* Evens.json in Resources */,
-				51CCD0E0F06A010909A90651D120F313 /* LocalAuthorites.json in Resources */,
-				2A893875BA84AC5608B2583280D36B6A /* Odds.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,11 +1066,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ADBBF982296AD4400536DF1 /* String+XT.swift in Sources */,
 				C011AA81551707927759BAFEAA9D6C43 /* CodiceFiscale-dummy.m in Sources */,
-				F130D8E3E43EC86CF0DAEFBE6C9EB206 /* Date+XT.swift in Sources */,
-				8E626E8533B2516539D13DD043ED268A /* FiscalCodeManager.swift in Sources */,
-				FE96132DC09B6A6076F328E09350B5AB /* JSONSerializer.swift in Sources */,
-				E7FB5F2B696B96919BC841EE0DDDDCD6 /* String+XT.swift in Sources */,
+				2ADBBF962296AD3E00536DF1 /* FiscalCodeManager.swift in Sources */,
+				2ADBBF952296AD3B00536DF1 /* Date+XT.swift in Sources */,
+				2ADBBF972296AD4100536DF1 /* JSONSerializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,10 +19,9 @@ class JSONSerializer {
     }
 
     static func serializeFromPODFileJSON<T>(modelType: T.Type, input sourceName: String, type: String) -> T? where T: Decodable {
-        guard
-            let podBundle = Bundle(identifier: "org.cocoapods.CodiceFiscale"),
-            let path = podBundle.path(forResource: sourceName, ofType: type)
-        else {
+        let podBundle = Bundle(for: JSONSerializer.self)
+
+        guard let path = podBundle.path(forResource: sourceName, ofType: type) else {
             return nil
         }
 
