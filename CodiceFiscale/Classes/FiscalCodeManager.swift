@@ -55,6 +55,10 @@ public class FiscalCodeManager: NSObject {
     public init(localAuthorietsFileName fileName: String, localAuthorietsExtension fileExtension: String) {
         localAuthorites = JSONSerializer.serializeFromFileJSON(modelType: [LocalAuthority].self, input: fileName, type: fileExtension)
     }
+
+    public init(localAuthoriets: [LocalAuthority]) {
+        localAuthorites = localAuthoriets
+    }
     
     // MARK: - Public Methods
     /**
