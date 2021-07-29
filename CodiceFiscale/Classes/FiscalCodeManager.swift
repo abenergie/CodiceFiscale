@@ -37,8 +37,8 @@ public struct LocalAuthority: Decodable {
     
     public init(province: String, town: String, code: String) {
         self.province = province
-        self.town = province
-        self.code = province
+        self.town = town
+        self.code = code
     }
     
     public init?(province: String?, town: String?, code: String?) {
