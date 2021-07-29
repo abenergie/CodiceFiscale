@@ -53,6 +53,12 @@ public struct LocalAuthority: Decodable {
         self.init(province: safeProvince, town: safeTown, code: safeCode)
     }
 }
+
+public enum Gender: Int {
+    case male = 0
+    case female = 1
+}
+
 public class FiscalCodeManager: NSObject {
     
     // MARK: - Varibles
