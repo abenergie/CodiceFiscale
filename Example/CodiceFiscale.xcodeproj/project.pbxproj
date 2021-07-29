@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21F8330A16520156D811400B /* Pods_CodiceFiscale_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5F20A4346C0938E766E106 /* Pods_CodiceFiscale_Example.framework */; };
 		2A40BAE02294093E0090732B /* Date+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40BADF2294093E0090732B /* Date+XT.swift */; };
 		2A40BAE622940EEE0090732B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40BAE522940EEE0090732B /* BaseViewController.swift */; };
 		2A40BAE822940F070090732B /* UIView+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40BAE722940F070090732B /* UIView+XT.swift */; };
+		461E359B09535982F5CE9550 /* Pods_CodiceFiscale_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D255F38D02F3E950675E9AD /* Pods_CodiceFiscale_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* FiscalCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* FiscalCodeViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		90C5A990533896965F2D7134 /* Pods_CodiceFiscale_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F916074930E588849507A1 /* Pods_CodiceFiscale_Tests.framework */; };
+		6A91670171C7FEB24A3D2D85 /* Pods_CodiceFiscale_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71DECD6D796AF05E4D65050 /* Pods_CodiceFiscale_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0179572F59D8C77B350D9AAF /* Pods-CodiceFiscale_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodiceFiscale_Example.release.xcconfig"; path = "Target Support Files/Pods-CodiceFiscale_Example/Pods-CodiceFiscale_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2A40BADF2294093E0090732B /* Date+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+XT.swift"; sourceTree = "<group>"; };
 		2A40BAE522940EEE0090732B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2A40BAE722940F070090732B /* UIView+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+XT.swift"; sourceTree = "<group>"; };
-		3B5F20A4346C0938E766E106 /* Pods_CodiceFiscale_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodiceFiscale_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD525BEAA8F37C7C00FCD45 /* CodiceFiscale.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CodiceFiscale.podspec; path = ../CodiceFiscale.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		474364A6554B6E9CBC6BACBA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		5929F73577559C09534ACE6E /* Pods-CodiceFiscale_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodiceFiscale_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CodiceFiscale_Tests/Pods-CodiceFiscale_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		4DD19E195FDE18BBA8872E18 /* Pods-CodiceFiscale_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodiceFiscale_Tests.release.xcconfig"; path = "Target Support Files/Pods-CodiceFiscale_Tests/Pods-CodiceFiscale_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		52171CBD84A1BDF87CD58EF5 /* Pods-CodiceFiscale_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodiceFiscale_Example.debug.xcconfig"; path = "Target Support Files/Pods-CodiceFiscale_Example/Pods-CodiceFiscale_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CodiceFiscale_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodiceFiscale_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,10 +49,9 @@
 		607FACE51AFB9204008FA782 /* CodiceFiscale_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodiceFiscale_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		75E95522941CCC1E629134E5 /* Pods-CodiceFiscale_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodiceFiscale_Example.debug.xcconfig"; path = "Target Support Files/Pods-CodiceFiscale_Example/Pods-CodiceFiscale_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		94F916074930E588849507A1 /* Pods_CodiceFiscale_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodiceFiscale_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA170ECE8F011121DB21B495 /* Pods-CodiceFiscale_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodiceFiscale_Example.release.xcconfig"; path = "Target Support Files/Pods-CodiceFiscale_Example/Pods-CodiceFiscale_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D5BF0A049AF2EF249293BA95 /* Pods-CodiceFiscale_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodiceFiscale_Tests.release.xcconfig"; path = "Target Support Files/Pods-CodiceFiscale_Tests/Pods-CodiceFiscale_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		691C8D5E6C27305D325A99DC /* Pods-CodiceFiscale_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodiceFiscale_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CodiceFiscale_Tests/Pods-CodiceFiscale_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D255F38D02F3E950675E9AD /* Pods_CodiceFiscale_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodiceFiscale_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A71DECD6D796AF05E4D65050 /* Pods_CodiceFiscale_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodiceFiscale_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A90463C3EFAE732CC52E28 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F8330A16520156D811400B /* Pods_CodiceFiscale_Example.framework in Frameworks */,
+				6A91670171C7FEB24A3D2D85 /* Pods_CodiceFiscale_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C5A990533896965F2D7134 /* Pods_CodiceFiscale_Tests.framework in Frameworks */,
+				461E359B09535982F5CE9550 /* Pods_CodiceFiscale_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +135,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2DD6CF7B19F96CEF2E3CE435 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A71DECD6D796AF05E4D65050 /* Pods_CodiceFiscale_Example.framework */,
+				6D255F38D02F3E950675E9AD /* Pods_CodiceFiscale_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +152,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				DA2ECB198ECB3A21B536EC1A /* Pods */,
-				C834F45AC268C23CA83E126C /* Frameworks */,
+				2DD6CF7B19F96CEF2E3CE435 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,22 +197,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		C834F45AC268C23CA83E126C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3B5F20A4346C0938E766E106 /* Pods_CodiceFiscale_Example.framework */,
-				94F916074930E588849507A1 /* Pods_CodiceFiscale_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		DA2ECB198ECB3A21B536EC1A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				75E95522941CCC1E629134E5 /* Pods-CodiceFiscale_Example.debug.xcconfig */,
-				BA170ECE8F011121DB21B495 /* Pods-CodiceFiscale_Example.release.xcconfig */,
-				5929F73577559C09534ACE6E /* Pods-CodiceFiscale_Tests.debug.xcconfig */,
-				D5BF0A049AF2EF249293BA95 /* Pods-CodiceFiscale_Tests.release.xcconfig */,
+				52171CBD84A1BDF87CD58EF5 /* Pods-CodiceFiscale_Example.debug.xcconfig */,
+				0179572F59D8C77B350D9AAF /* Pods-CodiceFiscale_Example.release.xcconfig */,
+				691C8D5E6C27305D325A99DC /* Pods-CodiceFiscale_Tests.debug.xcconfig */,
+				4DD19E195FDE18BBA8872E18 /* Pods-CodiceFiscale_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -215,12 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CodiceFiscale_Example" */;
 			buildPhases = (
-				D0BF893259C3E70CEDD10802 /* [CP] Check Pods Manifest.lock */,
+				2867FBAAA8D96399F6DBB52E /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				C6579F9C877CED970143BADA /* [CP] Embed Pods Frameworks */,
 				2A40BAC52293F8C40090732B /* Swiftlint */,
+				6BA71653CB0F8766BC0F4813 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,11 +235,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CodiceFiscale_Tests" */;
 			buildPhases = (
-				34D84468766968C6F37B96D0 /* [CP] Check Pods Manifest.lock */,
+				5F70EA8CA97DFEF326D0F9F1 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				DFF41EEB95FEA989B1B94ACE /* [CP] Embed Pods Frameworks */,
+				56789092917405C428C60E37 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,71 +314,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A40BAC52293F8C40090732B /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		34D84468766968C6F37B96D0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CodiceFiscale_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C6579F9C877CED970143BADA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CodiceFiscale_Example/Pods-CodiceFiscale_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CodiceFiscale/CodiceFiscale.framework",
-				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodiceFiscale.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodiceFiscale_Example/Pods-CodiceFiscale_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D0BF893259C3E70CEDD10802 /* [CP] Check Pods Manifest.lock */ = {
+		2867FBAAA8D96399F6DBB52E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,7 +336,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DFF41EEB95FEA989B1B94ACE /* [CP] Embed Pods Frameworks */ = {
+		2A40BAC52293F8C40090732B /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,13 +344,27 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		56789092917405C428C60E37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CodiceFiscale_Tests/Pods-CodiceFiscale_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
@@ -422,6 +372,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodiceFiscale_Tests/Pods-CodiceFiscale_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F70EA8CA97DFEF326D0F9F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CodiceFiscale_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BA71653CB0F8766BC0F4813 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CodiceFiscale_Example/Pods-CodiceFiscale_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CodiceFiscale/CodiceFiscale.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodiceFiscale.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodiceFiscale_Example/Pods-CodiceFiscale_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -586,7 +578,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75E95522941CCC1E629134E5 /* Pods-CodiceFiscale_Example.debug.xcconfig */;
+			baseConfigurationReference = 52171CBD84A1BDF87CD58EF5 /* Pods-CodiceFiscale_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
@@ -602,7 +594,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA170ECE8F011121DB21B495 /* Pods-CodiceFiscale_Example.release.xcconfig */;
+			baseConfigurationReference = 0179572F59D8C77B350D9AAF /* Pods-CodiceFiscale_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
@@ -618,7 +610,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5929F73577559C09534ACE6E /* Pods-CodiceFiscale_Tests.debug.xcconfig */;
+			baseConfigurationReference = 691C8D5E6C27305D325A99DC /* Pods-CodiceFiscale_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -637,7 +629,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5BF0A049AF2EF249293BA95 /* Pods-CodiceFiscale_Tests.release.xcconfig */;
+			baseConfigurationReference = 4DD19E195FDE18BBA8872E18 /* Pods-CodiceFiscale_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
