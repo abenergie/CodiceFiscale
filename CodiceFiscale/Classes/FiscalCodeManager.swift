@@ -66,16 +66,16 @@ public class FiscalCodeManager: NSObject {
     private let vowels = CharacterSet(charactersIn: "aeiou")
     private let monthCodes = "XABCDEHLMPRST"
     private let charactersLimit: Int = 3
-
+    
     // MARK: - Init
     public override init() {
         localAuthorites = JSONSerializer.serializeFromPODFileJSON(modelType: [LocalAuthority].self, input: "LocalAuthorites", type: "json")
     }
-
+    
     public init(localAuthorietsFileName fileName: String, localAuthorietsExtension fileExtension: String) {
         localAuthorites = JSONSerializer.serializeFromFileJSON(modelType: [LocalAuthority].self, input: fileName, type: fileExtension)
     }
-
+    
     public init(localAuthoriets: [LocalAuthority]) {
         localAuthorites = localAuthoriets
     }
@@ -83,34 +83,34 @@ public class FiscalCodeManager: NSObject {
     // MARK: - Public Methods
     /**
      Calcola codice fiscale
-
+     
      - returns: Codice fiscale
      
      - parameters:
-        - name: Nome della persone di cui calcolare il codice fiscale
-        - surname: Cognome della persone di cui calcolare il codice fiscale
-        - gender: Sesso della persone di cui calcolare il codice fiscale
-        - date: Data di nascita della persone di cui calcolare il codice fiscale
-        - town: Città di nascita della persone di cui calcolare il codice fiscale
-        - province: Provincia di nascita della persone di cui calcolare il codice fiscale
+     - name: Nome della persone di cui calcolare il codice fiscale
+     - surname: Cognome della persone di cui calcolare il codice fiscale
+     - gender: Sesso della persone di cui calcolare il codice fiscale
+     - date: Data di nascita della persone di cui calcolare il codice fiscale
+     - town: Città di nascita della persone di cui calcolare il codice fiscale
+     - province: Provincia di nascita della persone di cui calcolare il codice fiscale
      */
     public func calculate(name: String, surname: String, gender: Gender, date: Date, town: String, province: String) -> String? {
         let data = FiscalCode(name: name, surname: surname, gender: gender, date: date, town: town, province: province)
-
+        
         return calculate(data: data)
     }
-
+    
     /**
      Calcola codice fiscale
-
+     
      - returns: Codice fiscale
-
+     
      - parameter fiscalCodeData: Oggetto che comprende i dati essenziali per calcolare il codice fiscale
      */
     public func calculate(fiscalCodeData data: FiscalCode) -> String? {
         return calculate(data: data)
     }
-
+    
     public func retriveInformationFrom(fiscalCode: String) -> FiscalCode? {
         guard fiscalCode.isValidFiscalCode else {
             return nil
@@ -122,7 +122,7 @@ public class FiscalCodeManager: NSObject {
         let month = fiscalCode[8]
         let day = fiscalCode[9..<11]
         let cityCode = fiscalCode[11..<15]
-
+        
         guard
             let gender = getGender(day),
             let date = getNormalizedDate(year: year, month: month, day: day, gender: gender),
@@ -130,7 +130,7 @@ public class FiscalCodeManager: NSObject {
         else {
             return nil
         }
-
+        
         return FiscalCode(name: name,
                           surname: surname,
                           gender: gender,
@@ -138,35 +138,35 @@ public class FiscalCodeManager: NSObject {
                           town: localAuthority.town,
                           province: localAuthority.province)
     }
-
+    
     // MARK: - Private methods
     private func calculate(data: FiscalCode) -> String? {
         let cfSurname = sanitizeSurname(input: data.surname)
         let cfName = sanitizeName(input: data.name)
         let cfDate = sanitazeDate(input: data.date, sex: data.gender)
-
+        
         guard let cfCityCode = findCityCode(data.town) else {
             return nil
         }
-
+        
         let partialFiscalCode = "\(cfSurname)\(cfName)\(cfDate)\(cfCityCode)".uppercased()
-
+        
         guard let cfCheckDigit = calculateCin(input: partialFiscalCode) else {
             return nil
         }
-
+        
         let fiscalCode = "\(partialFiscalCode)\(cfCheckDigit)"
-
+        
         guard fiscalCode.isValidFiscalCode else {
             return nil
         }
-
+        
         return fiscalCode
     }
-
+    
     /**
      Cognome (3 lettere)
-
+     
      Vengono prese le consonanti del cognome (o dei cognomi, se ve ne è più di uno) nel loro ordine (primo cognome, di seguito il secondo e così via).
      Se le consonanti sono insufficienti, si prelevano anche le vocali (se sono sufficienti le consonanti si prelevano la prima, la seconda e la terza
      consonante), sempre nel loro ordine e, comunque, le vocali vengono riportate dopo le consonanti (per esempio: Rosi → RSO). Nel caso in cui un cognome
@@ -176,20 +176,20 @@ public class FiscalCodeManager: NSObject {
     private func sanitizeSurname(input: String) -> String {
         let dirtRemoved = removeDirt(input: input)
         let consVowels = divedeConsonantsAndVowels(input: dirtRemoved)
-
+        
         var stringsUnion = "\(consVowels.consonants)\(consVowels.vowels)"
-
+        
         if stringsUnion.count < charactersLimit {
             let charactersToAdd = String(repeating: "X", count: charactersLimit - dirtRemoved.count)
             stringsUnion.append(charactersToAdd)
         }
-
+        
         return stringsUnion[0..<charactersLimit]
     }
-
+    
     /**
      Nome (3 lettere)
-
+     
      Vengono prese le consonanti del nome (o dei nomi, se ve ne è più di uno) nel loro ordine (primo nome, di seguito il secondo e così via) in questo modo:
      se il nome contiene quattro o più consonanti, si scelgono la prima, la terza e la quarta (per esempio: Gianfranco → GFR),
      altrimenti le prime tre in ordine (per esempio: Tiziana → TZN). Se il nome non ha consonanti a sufficienza,
@@ -199,11 +199,11 @@ public class FiscalCodeManager: NSObject {
     private func sanitizeName(input: String) -> String {
         let dirtRemoved = removeDirt(input: input)
         let consVowels = divedeConsonantsAndVowels(input: dirtRemoved)
-
+        
         var stringsUnion = "\(consVowels.consonants)\(consVowels.vowels)"
-
+        
         var cfName = String()
-
+        
         if stringsUnion.count < charactersLimit {
             let charactersToAdd = String(repeating: "X", count: charactersLimit - dirtRemoved.count)
             stringsUnion.append(charactersToAdd)
@@ -217,13 +217,13 @@ public class FiscalCodeManager: NSObject {
                 cfName = stringsUnion[0..<charactersLimit]
             }
         }
-
+        
         return cfName
     }
-
+    
     /**
      Data di nascita
-
+     
      Anno di nascita (due cifre): si prendono le ultime due cifre dell'anno di nascita;
      Mese di nascita (una lettera): a ogni mese dell'anno viene associata una lettera in base a questa tabella:
      Lettera    Mese        Lettera     Mese        Lettera     Mese
@@ -238,7 +238,7 @@ public class FiscalCodeManager: NSObject {
         let month = input.component(.month)
         let monthCode = monthCodes[month]
         let year = input.formatted("yy")
-
+        
         switch sex {
         case .female:
             var dayComponent = input.component(.day)
@@ -247,13 +247,13 @@ public class FiscalCodeManager: NSObject {
         case .male:
             day = input.formatted("dd")
         }
-
+        
         return "\(year)\(monthCode)\(day)"
     }
-
+    
     /**
      Comune (o Stato) di nascita (quattro caratteri alfanumerici)
-
+     
      Per identificare il comune di nascita si utilizza il codice detto Belfiore, composto da una lettera e tre cifre numeriche.
      Per i nati al di fuori del territorio italiano, sia cittadini stranieri sia cittadini italiani nati all'estero,
      si considera lo stato estero di nascita; in tal caso la sigla inizia con la lettera Z, seguita dal numero identificativo dello stato.
@@ -263,15 +263,15 @@ public class FiscalCodeManager: NSObject {
         guard let localAuthorites = self.localAuthorites else {
             return nil
         }
-
+        
         let localAuthority = localAuthorites.first(where: { $0.town.lowercased() == town.lowercased() })
-
+        
         return localAuthority?.code
     }
-
+    
     /**
      Codice di controllo
-
+     
      https://it.wikipedia.org/wiki/Codice_fiscale
      */
     private func calculateCin(input: String) -> String? {
@@ -281,15 +281,15 @@ public class FiscalCodeManager: NSObject {
         else {
             return nil
         }
-
+        
         let ctrlChar = [0: "A", 1: "B", 2: "C", 3: "D", 4: "E", 5: "F", 6: "G", 7: "H", 8: "I", 9: "J", 10: "K", 11: "L", 12: "M", 13: "N", 14: "O", 15: "P", 16: "Q", 17: "R", 18: "S", 19: "T", 20: "U", 21: "V", 22: "W", 23: "X", 24: "Y", 25: "Z"]
-
+        
         var sumEvens = 0
         var sumOdds = 0
-
+        
         var evensCharacters = String()
         var oddsCharacaters = String()
-
+        
         for (index, character) in input.enumerated() {
             if (index + 1) % 2 == 0 {
                 evensCharacters.append(character)
@@ -299,27 +299,27 @@ public class FiscalCodeManager: NSObject {
                 sumOdds += odds[String(character)] ?? 0
             }
         }
-
+        
         return ctrlChar[(sumEvens + sumOdds) % 26]
     }
-
+    
     // MARK: - Reverse
     private func findCityBy( _ code: String) -> LocalAuthority? {
         guard let localAuthorites = self.localAuthorites else {
             return nil
         }
-
+        
         return localAuthorites.first(where: { $0.code == code })
     }
-
+    
     private func getGender(_ day: String) -> Gender? {
         guard let intDay = Int(day) else {
             return nil
         }
-
+        
         return intDay > 40 ? .female : .male
     }
-
+    
     private func getNormalizedDate(year: String, month: Character, day: String, gender: Gender) -> Date? {
         guard
             var intDay = Int(day),
@@ -328,24 +328,24 @@ public class FiscalCodeManager: NSObject {
         else {
             return nil
         }
-
+        
         let now = Date()
         let pos = monthCodes.distance(from: monthCodes.startIndex, to: intMonth)
-
+        
         // Calculate Days
         if gender == .female {
             intDay -= 40
         }
-
+        
         intYear += (now.component(.year) > intYear + 2000) ? 2000 : 1900
-
+        
         let dayFormat = intDay > 9 ? "dd" : "d"
         let monthFormat = pos > 9 ? "MM" : "M"
         let yearFormat = "yyyy"
-
+        
         return Date.from(string: "\(intDay) \(pos) \(intYear)", withFormat: "\(dayFormat) \(monthFormat) \(yearFormat)")
     }
-
+    
     // MARK: - Helpers
     private func removeDirt(input: String) -> String {
         let dirtRemoved = input
@@ -353,14 +353,14 @@ public class FiscalCodeManager: NSObject {
             .components(separatedBy: .whitespacesAndNewlines)
             .joined()
             .folding(options: .diacriticInsensitive, locale: .current)
-
+        
         return dirtRemoved
     }
-
+    
     private func divedeConsonantsAndVowels(input: String) -> (consonants: String, vowels: String) {
         var vowelsCharacters = String()
         var consonantsCharacters = String()
-
+        
         for char in input {
             if String(char).rangeOfCharacter(from: vowels) != nil {
                 vowelsCharacters.append(char)
@@ -368,7 +368,7 @@ public class FiscalCodeManager: NSObject {
                 consonantsCharacters.append(char)
             }
         }
-
+        
         return (consonantsCharacters, vowelsCharacters)
     }
 }
