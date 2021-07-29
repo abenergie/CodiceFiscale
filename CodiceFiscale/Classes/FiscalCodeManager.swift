@@ -17,7 +17,7 @@ public class FiscalCode: NSObject {
     public var date: Date
     public var town: String
     public var province: String
-
+    
     public init(name: String, surname: String, gender: Gender, date: Date, town: String, province: String) {
         self.name = name
         self.surname = surname
@@ -28,17 +28,31 @@ public class FiscalCode: NSObject {
     }
 }
 
-public class LocalAuthority: NSObject, Decodable {
+public struct LocalAuthority: Decodable {
     public var province: String
     public var town: String
     public var code: String
+    
+    // MARK: - Init
+    
+    public init(province: String, town: String, code: String) {
+        self.province = province
+        self.town = province
+        self.code = province
+    }
+    
+    public init?(province: String?, town: String?, code: String?) {
+        guard
+            let safeProvince = province,
+            let safeTown = town,
+            let safeCode = code
+        else {
+            return nil
+        }
+        
+        self.init(province: safeProvince, town: safeTown, code: safeCode)
+    }
 }
-
-public enum Gender {
-    case male
-    case female
-}
-
 public class FiscalCodeManager: NSObject {
     
     // MARK: - Varibles
